@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 bool issafe(int **arr, int x, int y, int n)
@@ -68,4 +68,5 @@ int main()
             cout << endl;
         }
     }
+    return 0;
 }
