@@ -1,6 +1,12 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 using namespace std;
+
+bool mycompare(pair<int, int> v1, pair<int, int> v2)
+{
+    return v1.first < v2.first;
+}
 
 int main()
 {
@@ -36,6 +42,21 @@ int main()
     {
         cout << element << " ";
     }
-
+    cout << endl;
+    int arr[] = {10, 16, 7, 14, 5, 3, 12, 9};
+    vector<pair<int, int>> z;
+    for (int i = 0; i < (sizeof(arr) / sizeof(arr[0])); i++)
+    {
+        z.push_back(make_pair(arr[i], i));
+    }
+    sort(z.begin(), z.end(),mycompare);
+    for (int i = 0; i < z.size(); i++)
+    {
+        arr[z[i].second] = i;
+    }
+    for (int i = 0; i < z.size(); i++)
+    {
+        cout << arr[i] << " ";
+    }
     return 0;
 }
