@@ -22,7 +22,24 @@ int main()
         }
         q.push_back(i);
     }
-    ans.push_back(nums[q.front()]);
+    ans.push_back(arr[q.front()]);
+    for (int i = k; i<n;i++)
+    {
+        if(q.front() == i-k)
+        {
+            q.pop_front();
+        }
+        while (!q.empty() && arr[q.back()] > arr[i])
+        {
+            q.pop_back();
+        }
+        q.push_back(i);
+        ans.push_back(arr[q.front()]);
+    }
+    for (auto i : ans)
+    {
+        cout << i << " ";
+    }
 
     return 0;
 }
