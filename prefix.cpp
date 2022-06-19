@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stack>
-#include <math.h>
+#include <cmath>
 using namespace std;
 
 int prefixEvaluation(string s)
