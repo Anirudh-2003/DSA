@@ -18,7 +18,7 @@ class queue
 public:
     node *front;
     node *back;
-    quene()
+    queue()
     {
         front = NULL;
         back = NULL;
@@ -26,7 +26,7 @@ public:
     void push(int x)
     {
         node *n = new node(x);
-        if (front == NULL)
+        if (back == NULL)
         {
             front = n;
             back = n;
