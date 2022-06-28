@@ -15,7 +15,7 @@ void maxSubArraySum(int arr[], int n, int k, int x)
     for (int i = k; i < n; i++)
     {
         sum -= arr[i - k];
-        sum += arr[k];
+        sum += arr[i];
         if (sum < x)
         {
             ans = max(ans, sum);
